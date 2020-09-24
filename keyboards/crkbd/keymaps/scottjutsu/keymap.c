@@ -17,11 +17,6 @@ extern rgblight_config_t rgblight_config;
 
 extern uint8_t is_master;
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- *  You can use _______ in place for KC_TRNS (transparent)   *
- *  Or you can use XXXXXXX for KC_NO (NOOP)                  *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */  
-
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
@@ -45,6 +40,9 @@ enum custom_keycodes {
 enum macro_keycodes {
   KC_SAMPLEMACRO,
 };
+
+// _______ = KC_TRNS = transparent
+// XXXXXXX = KC_NO = no-op
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_SCOTTY] = LAYOUT_split_3x6_3( \
